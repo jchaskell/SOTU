@@ -20,6 +20,7 @@ Functions:
 * Tracks word use in the president's annual State of the Union address
 * Easily choose which word to track (from a set of choices) on the sidebar dropdown menu
 * Graph updates with the choice of a word and plots how often that word (or a very similar word) appears in State of the Union speeches between 1790 and 2015
+* Graphs fit with our understanding of political history: "slavery"" common in the mid-1800s, "Communism"" common in the 1950s, and "war" before and during war
 
 
 
