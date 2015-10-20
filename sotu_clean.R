@@ -37,8 +37,14 @@ for (i in 1:length(words)) {
         sp[,labels[i]] <- str_count(sp$speech, words[i])
 }
 sotu <- sp[,-2]
+vars <- sort(colnames(sotu))
+sotu <- sotu[vars]
 
-save(sotu, file = "C:/Dropbox/Projects/Dissertation/president/scrape_speeches/SOTU/speeches.RData")
+#Create labels for the app
+labels <- sort(labels)
+labels_app <- list("America" = 1, "Budget" = 2, "China" = 3, "Communism" = 4, "Constitution" = 5, "Debt" = 6, "Deficit" = 7, "Democracy" = 8, "Democrat" = 9, "Economy" = 10, "Education" = 11, "Energy" = 12, "Environment" = 13, "Equal" = 14, "Fascism" = 15, "Freedom" = 16, "God" = 17, "Gun" = 18, "Health" = 19, "Justice" = 20, "Middle class" = 21, "Nuclear" = 22, "Peace" = 23, "Prohibition" = 24, "Republican" = 25, "Rights" = 26, "Russia/Soviet Union" = 27, "Slavery" = 28, "Social Security" = 29, "Tax" = 30, "War" = 31)            
+
+
 
 
 
