@@ -29,16 +29,16 @@ Functions:
 ## How the Data was Built
 * I took the text of the SOTU speeches from [The Presidency Project](http://www.presidency.ucsb.edu/sou.php)
 * I counted the number of times 31 different words that are relevant to the American political conversation appear in the speeches
-- Example -- counting "American"" from 2010 - 2015:
+- Example -- counting "America/American" from 2010 - 2015:
 
 ```r
 recent <- sp[which(sp$year >= 2010),] #subsets to only include 2010-2015
 recent$speech <- tolower(recent$speech) #puts speech in all lower case
-str_count(recent$speech, "god") #counts instances of "god" in each speech
+str_count(recent$speech, "america") #counts instances of "america/american" in each speech
 ```
 
 ```
-## [1] 2 2 2 3 3 2
+## [1] 70 58 88 60 87 75
 ```
 * I created a data frame that includes these counts for all 31 words and could then be used for the Shiny app
 * See [Github](https://github.com/jchaskell/SOTU/tree/gh-pages) for the detailed code for the entire process

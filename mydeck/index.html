@@ -71,15 +71,15 @@
     <ul>
 <li>I took the text of the SOTU speeches from <a href="http://www.presidency.ucsb.edu/sou.php">The Presidency Project</a></li>
 <li>I counted the number of times 31 different words that are relevant to the American political conversation appear in the speeches</li>
-<li>Example -- counting &quot;American&quot;&quot; from 2010 - 2015:</li>
+<li>Example -- counting &quot;America/American&quot; from 2010 - 2015:</li>
 </ul>
 
 <pre><code class="r">recent &lt;- sp[which(sp$year &gt;= 2010),] #subsets to only include 2010-2015
 recent$speech &lt;- tolower(recent$speech) #puts speech in all lower case
-str_count(recent$speech, &quot;god&quot;) #counts instances of &quot;god&quot; in each speech
+str_count(recent$speech, &quot;america&quot;) #counts instances of &quot;america/american&quot; in each speech
 </code></pre>
 
-<pre><code>## [1] 2 2 2 3 3 2
+<pre><code>## [1] 70 58 88 60 87 75
 </code></pre>
 
 <ul>
