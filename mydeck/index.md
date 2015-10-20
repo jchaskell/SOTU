@@ -27,7 +27,7 @@ Functions:
 --- .class #id 
 
 ## How the Data was Built
-* I took the text of the SOTU speeches from [The Presidency Project](http://www.presidency.ucsb.edu/sou.php)
+* I took the text of the State of the Union speeches from [The Presidency Project](http://www.presidency.ucsb.edu/sou.php)
 * I counted the number of times 31 different words that are relevant to the American political conversation appear in the speeches
 - Example -- counting "America/American" from 2010 - 2015:
 
