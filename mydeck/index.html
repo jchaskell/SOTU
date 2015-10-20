@@ -46,13 +46,16 @@
     <h2>State of the Union Word Tracker</h2>
   </hgroup>
   <article data-timings="">
-    <p>The <a href="https://jchaskell.shinyapps.io/SOTU">Shiny app</a> graphs the prevalence of 31 words in State of the Union speeches over time:</p>
+    <p>Interested in tracking how American political rhetoric has changed over time?</p>
+
+<p>Use the <a href="https://jchaskell.shinyapps.io/SOTU">State of the Union Word Tracker Shiny App</a>!</p>
+
+<p>Functions:</p>
 
 <ul>
-<li>The dropdown menu on the sidebar allows users to choose which word they want to track</li>
-<li>The main panel then graphs how often that word (or a very similar word) appears in State of the Union speeches between 1790-2015</li>
-<li>The user interface looks like this:
-<img src="app_screenshot.png" height="400px" width="600px" align="right"></li>
+<li>Tracks word use in the president&#39;s annual State of the Union address</li>
+<li>Easily choose which word to track (from a set of choices) on the sidebar dropdown menu</li>
+<li>Graph updates with the choice of a word and plots how often that word (or a very similar word) appears in State of the Union speeches between 1790 and 2015</li>
 </ul>
 
   </article>
@@ -61,7 +64,7 @@
 
 <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>Prepping the Data</h2>
+    <h2>How the Data was Built</h2>
   </hgroup>
   <article data-timings="">
     <ul>
@@ -70,9 +73,7 @@
 <li>Example -- counting &quot;American&quot;&quot; from 2010 - 2015:</li>
 </ul>
 
-<pre><code class="r">library(stringr)
-load(&quot;speeches.RData&quot;)
-recent &lt;- sp[which(sp$year &gt;= 2010),] #subsets to only include 2010-2015
+<pre><code class="r">recent &lt;- sp[which(sp$year &gt;= 2010),] #subsets to only include 2010-2015
 recent$speech &lt;- tolower(recent$speech) #puts speech in all lower case
 str_count(recent$speech, &quot;god&quot;) #counts instances of &quot;god&quot; in each speech
 </code></pre>
@@ -94,7 +95,7 @@ str_count(recent$speech, &quot;god&quot;) #counts instances of &quot;god&quot; i
     <h2>Graphing the Data</h2>
   </hgroup>
   <article data-timings="">
-    <p>Users can select the word they want to track and the graph will display on the main panel.</p>
+    <p>Users can select the word they want to track from a list of 31 choices and the graph will display on the main panel.</p>
 
 <p>The code for graphing counts of the word &quot;God&quot; is here:</p>
 
@@ -141,7 +142,7 @@ str_count(recent$speech, &quot;god&quot;) #counts instances of &quot;god&quot; i
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Prepping the Data'>
+        data-slide=2 title='How the Data was Built'>
          2
       </a>
     </li>

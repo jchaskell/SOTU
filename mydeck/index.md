@@ -12,24 +12,25 @@ knit        : slidify::knit2slides
 ---
 
 ## State of the Union Word Tracker
+Interested in tracking how American political rhetoric has changed over time?
 
-The [Shiny app](https://jchaskell.shinyapps.io/SOTU) graphs the prevalence of 31 words in State of the Union speeches over time:
-* The dropdown menu on the sidebar allows users to choose which word they want to track
-* The main panel then graphs how often that word (or a very similar word) appears in State of the Union speeches between 1790-2015
-* The user interface looks like this:
-<img src="app_screenshot.png" height="400px" width="600px" align="right">
+Use the [State of the Union Word Tracker Shiny App](https://jchaskell.shinyapps.io/SOTU)!
+
+Functions:
+* Tracks word use in the president's annual State of the Union address
+* Easily choose which word to track (from a set of choices) on the sidebar dropdown menu
+* Graph updates with the choice of a word and plots how often that word (or a very similar word) appears in State of the Union speeches between 1790 and 2015
+
 
 
 --- .class #id 
 
-## Prepping the Data
+## How the Data was Built
 * I took the text of the SOTU speeches from [The Presidency Project](http://www.presidency.ucsb.edu/sou.php)
 * I counted the number of times 31 different words that are relevant to the American political conversation appear in the speeches
 - Example -- counting "American"" from 2010 - 2015:
 
 ```r
-library(stringr)
-load("speeches.RData")
 recent <- sp[which(sp$year >= 2010),] #subsets to only include 2010-2015
 recent$speech <- tolower(recent$speech) #puts speech in all lower case
 str_count(recent$speech, "god") #counts instances of "god" in each speech
@@ -44,7 +45,7 @@ str_count(recent$speech, "god") #counts instances of "god" in each speech
 
 ---
 ## Graphing the Data
-Users can select the word they want to track and the graph will display on the main panel.
+Users can select the word they want to track from a list of 31 choices and the graph will display on the main panel.
 
 The code for graphing counts of the word "God" is here:
 

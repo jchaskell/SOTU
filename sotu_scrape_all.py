@@ -1,5 +1,5 @@
 """
-Script to scrape SOTU speeches: puts them in txt files
+Script to scrape SOTU speeches: puts them in txt files. NOTE: a few years include multiple SOTU addresses that have multiple links on the main page. Because this was only a few years, I manually copied the text into the .txt files so that the files include all SOTU addresses for each year
 """
 
 import requests
