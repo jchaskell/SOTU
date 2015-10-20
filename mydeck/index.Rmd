@@ -39,7 +39,7 @@ str_count(recent$speech, "god") #counts instances of "god" in each speech
 
 ```
 * I created a data frame that includes these counts for all 31 words and could then be used for the Shiny app
-* See [Github](https://github.com/jchaskell/SOTU) for the detailed code for the entire process
+* See [Github](https://github.com/jchaskell/SOTU/tree/gh-pages) for the detailed code for the entire process
 
 
 ---
